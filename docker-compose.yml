@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: fabrix_mobile_api
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads
+    ports:
+      - "127.0.0.1:8100:8100"
